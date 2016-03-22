@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 20160318144352) do
   enable_extension "plpgsql"
 
   create_table "diagnoses", force: :cascade do |t|
-    t.string "diagnosis_name"
-    t.string "ICD_code"
+    t.integer "patient_id"
+    t.string  "diagnosis_name"
+    t.string  "icd_code"
   end
 
   create_table "patients", force: :cascade do |t|

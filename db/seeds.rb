@@ -51,7 +51,7 @@ john = Patient.create({
   })
 
 asthma = Diagnosis.create({
-  diagnosis_name: "Asthma"
+  diagnosis_name: "Asthma",
   icd_code: "J45"
   })
 

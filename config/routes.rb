@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root to: 'patients#index'
 
-  resources :patients
-
-
+  resources :patients do
+    resources :diagnoses
+  end
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

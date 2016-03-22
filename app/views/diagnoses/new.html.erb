@@ -1,0 +1,9 @@
+<h2>New Diagnosis</h2>
+
+<ol>
+<%= form_for @diagnosis do |f| %>
+    <li><%= f.label :diagnosis_name %> <%= f.text_field :diagnosis_name %></li>
+    <li><%= f.label :icd %> <%= f.text_field :icd %></li>
+    <li><%= f.submit %></li>
+<% end %>
+</ol>

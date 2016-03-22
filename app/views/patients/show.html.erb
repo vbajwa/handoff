@@ -8,3 +8,16 @@
   <li>Smoker Status:   <%= @patient.smoker %></li>
   <li>Past Surgeries:   <%= @patient.surgery %></li>
 </ul>
+
+<h2>Diagnoses <%= link_to "(+)", new_patient_diagnosis_path(@patient) %></h2>
+
+<ul>
+  <% @patient.diagnoses.each do |diagnosis| %>
+    <li>
+
+    </li>
+  <% end %>
+</ul>
+<h2><%=link_to 'Delete Patient', @patient, method: :delete%></h2>
+<h2><%=link_to 'Edit Patient', edit_patient_path%></h2>
+<h3><%=link_to 'Home', root_path%></h3>
