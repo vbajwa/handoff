@@ -1,9 +1,9 @@
-<h1>Diagnosis: <%=@diagnosis.name %></h1>
+<h1><%=@diagnosis.diagnosis_name%></h1>
 
 <ul>
-  <li>ICD code:   <%= @diagnosis.icd %></li>
+  <%@diagnosis.patients.each do |patient|%>
+    <li><%= patient.name %></li>
+  <%end%>
 </ul>
 
-<h2><%=link_to 'Delete Diagnosis', @diagnosis, method: :delete%></h2>
-<h2><%=link_to 'Edit Diagnosis', edit_patient_path%></h2>
-<h3><%=link_to 'Home', root_path%></h3>
+<h2>Delete Diagnosis</h2>

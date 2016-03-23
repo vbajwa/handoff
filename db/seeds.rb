@@ -55,9 +55,90 @@ asthma = Diagnosis.create({
   icd_code: "J45"
   })
 
+abdpain = Diagnosis.create({
+  diagnosis_name: "Abdominal Pain",
+  icd_code: "R10"
+  })
 
+cp = Diagnosis.create({
+  diagnosis_name: "Chest Pain",
+  icd_code: "R07"
+  })
 
+diarrhea = Diagnosis.create({
+  diagnosis_name: "Diarrhea",
+  icd_code: "R19"
+  })
 
+headache = Diagnosis.create({
+  diagnosis_name: "headache",
+  icd_code: "R51"
+  })
+
+ascites = Diagnosis.create({
+  diagnosis_name: "Ascites",
+  icd_code: "R18"
+  })
+
+melena = Diagnosis.create({
+  diagnosis_name: "Melena",
+  icd_code: "K92"
+  })
+
+vertigo = Diagnosis.create({
+  diagnosis_name: "Vertigo",
+  icd_code: "R42"
+  })
+
+dysuria = Diagnosis.create({
+  diagnosis_name: "Dysuria",
+  icd_code: "R30"
+  })
+
+  edema = Diagnosis.create({
+    diagnosis_name: "Edema",
+    icd_code: "R60"
+    })
+
+  hematemesis = Diagnosis.create({
+    diagnosis_name: "Hematemesis",
+    icd_code: "K92"
+    })
+
+  hepatomegaly = Diagnosis.create({
+    diagnosis_name: "Hepatomegaly",
+    icd_code: "R16"
+    })
+
+  hypoxemia = Diagnosis.create({
+    diagnosis_name: "Hypoxemia",
+    icd_code: "R09"
+    })
+
+  incontinence = Diagnosis.create({
+    diagnosis_name: "Incontinence/enuresis",
+    icd_code: "R32"
+    })
+
+  malaise = Diagnosis.create({
+    diagnosis_name: "Malaise",
+    icd_code: "R53"
+    })
+
+  nausea = Diagnosis.create({
+    diagnosis_name: "Nausea",
+    icd_code: "R11"
+    })
+
+  polyuria = Diagnosis.create({
+    diagnosis_name: "Polyuria",
+    icd_code: "R35"
+    })
+
+  priapism = Diagnosis.create({
+    diagnosis_name: "Priapism",
+    icd_code: "N48"
+    })
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).

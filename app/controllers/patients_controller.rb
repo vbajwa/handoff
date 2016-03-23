@@ -4,6 +4,14 @@ class PatientsController < ApplicationController
     @patients = Patient.all
   end
 
+  def add_diagnosis
+    @patient = Patient.find(params[:id])
+    @diagnosis = Diagnosis.find(params[:diagnosis_id])
+    @patient_diagnosis = PatientDiagnosis.create!(patient: @patient, diagnosis: @diagnosis)
+
+    redirect_to @patient
+  end
+
   def new
     @patient = Patient.new
   end
@@ -36,9 +44,18 @@ class PatientsController < ApplicationController
     redirect_to patients_path
   end
 
+  # def show_diagnosis
+  #   @diagnosis. Diagnosis.find(params[:diagnosis_id])
+  #
+  # end
+
   private
   def patient_params
   params.require(:patient).permit(:name, :mrn, :age, :sex, :insurance, :smoker, :surgery)
+  end
+
+  def dx_params
+    params.require(:diagnosis).permit(:diagnosis_name, :icd_code)
   end
 
 end

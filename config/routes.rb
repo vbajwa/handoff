@@ -2,8 +2,12 @@ Rails.application.routes.draw do
   root to: 'patients#index'
 
   resources :patients do
-    resources :diagnoses
+    member do
+      post 'add_diagnosis'
+      post 'remove_diagnosis'
+    end
   end
+  resources :diagnoses
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,3 +1,5 @@
 class Diagnosis < ActiveRecord::Base
-  belongs_to :patient
+  has_many :patient_diagnoses
+  has_many :patients, through: :patient_diagnoses
+
 end

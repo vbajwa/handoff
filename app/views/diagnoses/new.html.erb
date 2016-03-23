@@ -1,9 +1,9 @@
 <h2>New Diagnosis</h2>
 
-<ol>
-<%= form_for @diagnosis do |f| %>
+<ul>
+<%= form_for [@diagnosis] do |f| %>
     <li><%= f.label :diagnosis_name %> <%= f.text_field :diagnosis_name %></li>
-    <li><%= f.label :icd %> <%= f.text_field :icd %></li>
+    <li><%= f.label :icd_code %> <%= f.text_field :icd_code %></li>
     <li><%= f.submit %></li>
 <% end %>
-</ol>
+</ul>
