@@ -12,7 +12,6 @@ class DiagnosesController < ApplicationController
   end
 
   def edit
-    @patient = Patient.find(params[:patient_id])
     @diagnosis = Diagnosis.find(params[:id])
   end
 
@@ -31,7 +30,11 @@ class DiagnosesController < ApplicationController
     @diagnosis = Diagnosis.find(params[:id])
     @diagnosis.destroy
 
-    redirect_to root_path
+    redirect_to diagnoses_path
+  end
+
+  def show_patient
+    redirect to patient_path
   end
 
   private

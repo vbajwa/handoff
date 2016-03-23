@@ -1,4 +1,9 @@
-<h1>Patients <a href="/patients/new">(+)</a></h1>
+<h1>Welcome to Hand-Off!</h1>
+<nav>
+  <%=link_to 'Diagnoses', diagnoses_path%>
+</nav>
+
+<h2>Census <a href="/patients/new">(+)</a></h2>
 
 <ul>
   <% @patients.each do |patient| %>
