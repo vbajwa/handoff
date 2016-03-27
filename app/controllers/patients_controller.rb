@@ -53,6 +53,7 @@ class PatientsController < ApplicationController
   def patient_params
   params.require(:patient).permit(:name, :mrn, :age, :sex, :insurance, :smoker, :surgery)
   end
+  # Noice
 
   def dx_params
     params.require(:diagnosis).permit(:diagnosis_name, :icd_code)

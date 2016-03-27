@@ -13,6 +13,7 @@
   <%= form_tag(add_diagnosis_patient_path(@patient)) do %>
     <%=label_tag "Diagnosis" %>
     <%= select_tag(:diagnosis_id, options_for_select(Diagnosis.all.map{|d| ["#{d.icd_code} - #{d.diagnosis_name}", d.id]}))%>
+    <%# This would be a good candidate for a helper method in app/helpers %>
     <%=submit_tag "Add Diagnosis"%>
   <%end%>
 <ul>

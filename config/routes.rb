@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'patients#index'
 
   resources :patients do
+    # Nice
     member do
       post 'add_diagnosis'
       post 'remove_diagnosis'
