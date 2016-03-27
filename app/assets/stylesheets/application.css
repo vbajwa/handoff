@@ -20,6 +20,7 @@ body{
 }
 .plus_button:hover {
   transform: rotate(1200deg);
+  /*I seem to remember you saying you hated CSS. I call shenanigans.*/
   text-decoration: none;
 }
 h1, h2{
